@@ -1,0 +1,410 @@
+ <!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/index.dwt" codeOutsideHTMLIsLocked="false" --><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Fashion Collection</title>
+    <!-- InstanceEndEditable -->
+    <!-- Bootstrap -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet"  >
+    <link href="css/custon.css" rel="stylesheet" type="text/css" id="red" >
+    <link href="css/42882f.css"  rel="stylesheet" type="text/css" id="green" disabled >   
+    <link href="css/238cc0.css"  rel="stylesheet" type="text/css" id="blue" disabled >   
+    <link href="css/ee910c.css"  rel="stylesheet" type="text/css" id="yellow" disabled >   
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <script src="js/js.js"></script> 
+    <script src="javascript/color.js"> </script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="javascript/logn.js"> </script>
+	<script src="js/bootstrap.min.js"> </script> 
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn"t work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 
+    <style>
+	*{padding:0px auto;
+	margin:0px auto;}
+	
+    </style>
+
+
+</head >
+  <body>
+   
+<header> 
+<div class="container-fluid"  id="fc">
+  <div class="row row1" >
+    <div class="col-md-9 pull-left col2"> <marquee scrollamount="3"><b>Price Update:-</b><strong>Cappuciio</strong> Rs:-18,000/= &nbsp;&nbsp;&nbsp; <strong>Lattics Gardent</strong> Rs:-15,000/= &nbsp;&nbsp;&nbsp; <strong>Malika Art</strong> Rs:-10,000/=&nbsp;&nbsp;&nbsp; <strong>Cinza Art</strong> Rs:-13,000/=&nbsp;&nbsp;&nbsp;<strong>Cream Rose</strong> Rs:- Coming Soon&nbsp;&nbsp;&nbsp;<strong>Vahalla</strong> Rs:-240,000/=&nbsp;&nbsp;&nbsp;<strong>Fire ice</strong>  Rs:-150,000/=&nbsp;&nbsp;&nbsp;<strong>Hanging</strong> Rs:-55,000/=&nbsp;&nbsp;&nbsp;<strong>Primrose</strong> Rs:-45,000/=&nbsp;&nbsp;&nbsp;<strong>Poison Lay</strong> Rs:-23,000/=</marquee></div>
+   
+    <div class="col-md-3 pull-right col3" >
+    <a href="#" data-toggle="modal" data-target="#mymodal"  id="lg"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a>&nbsp;&nbsp;<a href="#" id="lg1" style="display:none; float:right; font-weight:bold" onClick="lgut();"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a>&nbsp;&nbsp;  <a href="#"><strong>|</strong></a> &nbsp;&nbsp; <a href="registration.html" id="reg"  style="display:block; float:right; "> Registration</a>&nbsp;&nbsp; <a  id="cart" href="#" data-toggle="modal" data-target="#mymodal2" style="float:right;" ><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;MyCart&nbsp;&nbsp;<strong>|</strong>&nbsp;</a></div>  
+  </div>
+
+<div class="modal fade" id="mymodal2" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header" style="text-align:center;">Cart List<button type="button" class="close" data-dismiss="modal">&times;</button> </div>
+<div class="modal-body">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-4" style="text-align:center"><strong>Product Code</strong> </div>
+<div class="col-md-2 col-sm-2 col-xs-2" style="text-align:center" ><strong> Quantity</strong></div>
+<div class="col-md-3 col-sm-3 col-xs-3" style="text-align:center"><strong>Size</strong></div>
+<div class="col-md-3 col-sm-3 col-xs-3" style="text-align:center"><strong>Price</strong></div> 
+
+
+</div><br>
+<br>
+
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-4" ><ol id="code"></ol></div>
+<div class="col-md-2 col-sm-2 col-xs-2"><ul id="qty"></ul></div>
+<div class="col-md-3 col-sm-3 col-xs-3"><ul id="size"></ul></div>
+<div class="col-md-3 col-sm-3 col-xs-3"><ul id="price"></ul></div>
+
+
+</div>
+
+
+</div>
+<div class="modal-footer"><button type="button" class="btn btn-default" onClick="order();"  data-dismiss="modal" >Order</button></div>
+
+</div>
+</div>
+</div>
+
+  <div id="mymodal" class="modal fade" role="dialog"> 
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">LOGIN<button type="button" class="close" data-dismiss="modal">&times;</button> </div>
+<div class="modal-body"><form role="form" id="formlogin" name="f1" >
+<div class="form-group"><label id="label">Username</label>
+<input type="text" name="t1" placeholder="Username" class="form-control" ></div><div class="form-group">
+<label>Password</label><input type="password" name="t2" placeholder="Password" class="form-control"   >
+</div>
+</form> </div>
+<div class="modal-footer"><button type="button" class="btn btn-default" onClick="lgin();"  data-dismiss="modal" >Login</button> </div>
+</div></div></div>
+
+ <a href="about_us.html" style="text-decoration:none;"><h1 class="h1" style="font-size:36px; text-align:center"><span class="spanfnt">Fashion</span> Collection</h1>  </a>
+
+</div>
+</header> 
+
+
+<div class="navbar   navbar-inverse navbar-static-top"  id="nav"  data-spy="affix" data-offset-top="75">
+<div class="container"> 	  <div class="navbar-header">  
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">  
+ 
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+  <!-- InstanceBeginEditable name="EditRegion3" -->
+  <div class="collapse navbar-collapse" style=" text-align:left">
+    <ul class="nav navbar-nav nav-justified" style="color:white;" >
+      <li> </li>
+      <li> </li>
+      <li ><a href="index.html">Home</a></li>
+      <li ><a href="new-collection.html">New Collection</a></li>
+      <li><a href="Pret.html">Pret</a></li>
+      <li class="active"><a href="luxury dress.html">Luxury Dress</a></li>
+      <li ><a href="contact us.html">Contact Us</a></li>
+      <li> </li>
+      <li> </li>
+    </ul>
+  </div>
+  <!-- InstanceEndEditable --></div> 
+   </div>
+
+<div class="container-fluid sidebar"><div class="row"> <div class="col-md-12"> <ul class="nav navbar-nav navbar  navmy"> <li style="background:#42882f;" onClick="game();" class="remove1"></li><li onClick="game1();" style="background:#ee910c;" class="remove2"></li><li style="background:#238cc0;" class="remove3" onClick="game2();"></li><li onClick="game3();" style="background:#c00;" class="remove"></li> </ul> </div> </div> 
+</div> 
+<!-- InstanceBeginEditable name="EditRegion2" -->
+<section >
+   <div class="container-fluid full" style="margin-top:-20px !important;"><div class="row"><div class="col-md-12"><div class="banner"> <h2 class="h2">&nbsp;&nbsp;Luxury Dresses&nbsp;&nbsp;</h2><div class="line3"></div></div> <img src="Image/Luxury dress/Untitled-1.jpg" class="img4"> </div> </div> </div>
+</section>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="EditRegion1" -->
+<section style="background:black;"><br><br>
+    <div class="container black" >
+  <div class="row">
+       <div class="col-md-3"><img src="Image/Luxury dress/0000322_cream-rose-bridal-shirt.jpeg" onMouseOver="this.src='Image/Luxury dress/0000323_cream-rose-bridal-shirt.jpeg'" onMouseOut="this.src='Image/Luxury dress/0000322_cream-rose-bridal-shirt.jpeg'" class="img2" name="pic14">
+   <h4>Cream Rose Bridal</h4><h4>Call for pricing</h4>    <a href="#" onClick="abc(pic14.name);" data-toggle="modal" data-target="#mymodal1">   <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Luxury dress/0000361_saffron-orange-net-dress.jpeg" onMouseOver="this.src='Image/Luxury dress/0000362_saffron-orange-net-dress.jpeg'" onMouseOut="this.src='Image/Luxury dress/0000361_saffron-orange-net-dress.jpeg'" class="img2" name="pic13">
+   <h4>Saffron Orange Net</h4><h4>Rs. 150,000.00</h4>   <a href="#" onClick="abc(pic13.name);" data-toggle="modal" data-target="#mymodal1">   <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Luxury dress/0000367_teal-blue-jacket.jpeg" onMouseOver="this.src='Image/Luxury dress/0000368_teal-blue-jacket.jpeg'" onMouseOut="this.src='Image/Luxury dress/0000367_teal-blue-jacket.jpeg'" class="img2" name="pic12">
+<h4>Odette</h4><h4>Rs. 160,000.00</h4>  <a href="#" onClick="abc(pic12.name);" data-toggle="modal" data-target="#mymodal1">       <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Luxury dress/0000487_cream-floral-bouquet.jpeg" onMouseOver="this.src='Image/Luxury dress/0000488_cream-floral-bouquet.jpeg'" onMouseOut="this.src='Image/Luxury dress/0000487_cream-floral-bouquet.jpeg'" class="img2" name="pic11">
+  <h4>Blush Salmon</h4><h4>Rs. 240,000.00</h4>  <a href="#" onClick="abc(pic11.name);" data-toggle="modal" data-target="#mymodal1">     <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+     </div> 
+     
+   <div class="row">
+       <div class="col-md-3"><img src="Image/Luxury dress/0000498_velvet-applique-jacket.jpeg" onMouseOver="this.src='Image/Luxury dress/0000499_velvet-applique-jacket.jpeg'" onMouseOut="this.src='Image/Luxury dress/0000498_velvet-applique-jacket.jpeg'" class="img2" name="pic10">
+   <h4>Velvet Applique Jacket</h4><h4>Rs. 200,000.00</h4> <a href="#" onClick="abc(pic10.name);" data-toggle="modal" data-target="#mymodal1">     <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Luxury dress/0001815_opaline-crystal.jpeg" onMouseOver="this.src='Image/Luxury dress/0001816_opaline-crystal.jpeg'" onMouseOut="this.src='Image/Luxury dress/0001815_opaline-crystal.jpeg'" class="img2" name="pic9">
+    <h4>Opaline Crystal</h4><h4>Rs. 220,000.00</h4> <a href="#" onClick="abc(pic9.name);" data-toggle="modal" data-target="#mymodal1">     <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Luxury dress/0001842_cadenza.jpeg" onMouseOver="this.src='Image/Luxury dress/0001843_cadenza.jpeg'" onMouseOut="this.src='Image/Luxury dress/0001842_cadenza.jpeg'" class="img2" name="pic8">
+ <h4>Cadenza</h4><h4>Rs. 240,000.00</h4> <a href="#" onClick="abc(pic8.name);" data-toggle="modal" data-target="#mymodal1">        <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Luxury dress/0002144_omorose-quartz.jpeg" onMouseOver="this.src='Image/Luxury dress/0002145_omorose-quartz.jpeg'" onMouseOut="this.src='Image/Luxury dress/0002144_omorose-quartz.jpeg'" class="img2" name="pic7">
+  <h4>Omorose Quartz</h4><h4>Rs. 280,000.00</h4><a href="#" onClick="abc(pic7.name);" data-toggle="modal" data-target="#mymodal1">       <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+     </div>     
+     
+       <div class="row">
+       <div class="col-md-3"><img src="Image/Luxury dress/0002153_merlot-crimson.jpeg" onMouseOver="this.src='Image/Luxury dress/0002154_merlot-crimson.jpeg'" onMouseOut="this.src='Image/Luxury dress/0002153_merlot-crimson.jpeg'" class="img2" name="pic6">
+    <h4>Merlot Crimson</h4><h4>Rs. 240,000.00</h4>  <a href="#" onClick="abc(pic6.name);" data-toggle="modal" data-target="#mymodal1">    <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Luxury dress/0002168_perignon-moss.jpeg" onMouseOver="this.src='Image/Luxury dress/0002169_perignon-moss.jpeg'" onMouseOut="this.src='Image/Luxury dress/0002168_perignon-moss.jpeg'" class="img2" name="pic5">
+  <h4>Perignon</h4><h4>Rs. 220,000.00</h4> <a href="#" onClick="abc(pic5.name);" data-toggle="modal" data-target="#mymodal1">      <div class="btn join2">SHOP NOW </div> </a>
+         <br>
+         <br>
+       </div>
+       
+      
+      
+    <div id="mymodal1" class="modal" role="dialog">
+   <div class="modal-dialog">
+   <div class="modal-content">
+   <div class="modal-header">Product Detail</div>
+   <div class="modal-body mycolor">
+   
+   <div id="mywork" style="display:none;"> <img id="pic1" src="Image/New Collection/0001873_aqua-sea-crystal.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Aqua Sea<br>
+ <b>Product Code</b> <span id="code1" > AQS-00231</span>  <br>
+ <b>Rs. <span id="price1">20,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty1"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s1"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Organza kameez with spaghetti strap embellished with beads, crystals and resham. Neckline embellished with Swarovski crystals and resham. Shirt front embellished with floral embroidery of beads, resham, tilla and sequins. Tilla embroidered branches on shirt front. Brocade finishing. Plain back. Fused raw silk culottes with hem embellished with sequins, beads and nakshi lines.</p>
+</div>
+   
+   
+   <div id="mywork1" style="display:none;"> <img  src="Image/New Collection/0001864_mint-nude-bird.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Mint Nude Bird<br>
+ <b>Product Code</b> <span id="code2" >MNDB-00981</span>  <br>
+ <b>Rs. <span id="price2">23,000.00M</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty2"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s2"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Boat neck net shirt with bell sleeves. Gold tilla embroidery on neckline and daaman embellished with sequins, beads, Swarovski crystals and kutdaanas. Embellished trellises on shirt front. Sleeves are also embellished. Plain back. Brocade choli underneath shirt. Screen print culottes. </p>
+</div>
+
+<div id="mywork2" style="display:none;"> <img  src="Image/New Collection/0001852_lilac-zigzag.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Lilac Zigzag<br>
+ <b>Product Code</b><span id="code3" > LZI-08881</span> <br>
+ <b>Rs. <span id="price3">24,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty3"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s3"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Lilac net half sleeves jacket embellished all over with sequins and bead zigzag lines. Heavy floral motif on both flaps embellished with dabka, nakshi, sequins, resham, crystals, French knots and beads. Hooks to fasten jacket. Brocade finishing. Jacket back hem embellished with zigzag lines of beads and sequins and a heavy floral motif embellished with dabka-nakshi, sequins, resham, crystals, French knots and beads. Brocade choli with twisted spaghetti straps underneath jacket. Fused raw silk pants hem embroidered with resham zigzag embroidery lines.</p>
+</div> 
+
+<div id="mywork3" style="display:none;"> <img  src="Image/New Collection/0001855_blue-tilla-roses.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Blue Tilla Roses<br>
+ <b>Product Code</b><span id="code4" >  BLTR-056681</span>  <br>
+ <b>Rs. <span id="price4">24,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty4"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s4"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Peplum-like style cut of organza paneled shirt with two-tone loop button detailing on the front. Bead lines running from top to bottom of shirt front and back. Gold tilla floral embroidery all around on shirt hem with bead touching. Ball droplet finishing all round hem. Net dupatta with a shoulder motif of floral tilla embroidery and bead touching. Fused organza pants with gold floral tilla embroidery on pant cuff.</p>
+</div>
+
+<div id="mywork4" style="display:none;"> <img  src="Image/Luxury dress/0002168_perignon-moss.jpeg"  width="150" class="modalimg" ><b>Name:-</b>Perignon Moss<br>
+ <b>Product Code</b><span id="code5" >  PGMS-05641</span>  <br>
+ <b>Rs. <span id="price5">220,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; "  id="qty5"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s5"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Has embellished neckline of nakshi, resham, dabka, crystals and beads. Embellished trellises running down to a heavy daaman worked with crystals, beads, sequins, badla and resham. Bead drop finishing on shirt&rsquo;s cutworked hem.</p>
+</div>
+
+<div id="mywork5" style="display:none;"> <img  src="Image/Luxury dress/0002153_merlot-crimson.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Merlot Crimson<br>
+ <b>Product Code</b> <span id="code6" >MLCM-578001</span>  <br>
+ <b>Rs. <span id="price6">240,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty6"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s6"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal"><b>Choli:</b> Red cotton Net choli with front fully embellished tilla, sequin, beads, pearls, crystals and nakshi all over.
+ 
+<br><b>Jacket:</b> Maisuri ivory jacket completely embellished with sequins, French knots, cut dana, Swarovski crystals, baadla and dabka-nakshi. Border is worked with resham, sequins and cut dana. Birds motifs embellished with resham and cut dana. Cotton silk lining.</p>
+</div>
+
+<div id="mywork6" style="display:none;"> <img  src="Image/Luxury dress/0002144_omorose-quartz.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Omorose<br>
+ <b>Product Code</b><span id="code7" > OMRS-00414</span>  <br>
+ <b>Rs. <span id="price7">280,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty7"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s7"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">elvet bodice embellished with crystals, dabka, sequins and nakshi. Screen print border with gota trims and narrow border velvet finishing.</p>
+</div>
+
+<div id="mywork7" style="display:none;"> <img  src="Image/Luxury dress/0001842_cadenza.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Cadenza <br>
+ <b>Product Code</b> <span id="code8" >MHGK-045709</span>  <br>
+ <b>Rs. <span id="price8">240,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty8"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s8"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Worked with dabka nakshi, sequins, French knots and resham. It has a jaal of sequins and French knots on front and back. A sequins and bead border on front and back neckline as well as on waist hem. Net sleeves worked with dabka, nakshi, sequins and resham. Paanch patti sequins and beads chan all over sleeves. Sleeve hem is cutworked. </p>
+</div>
+<div id="mywork8" style="display:none;"> <img  src="Image/Luxury dress/0001815_opaline-crystal.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Opaline Crystal<br>
+ <b>Product Code</b> <span id="code9" >OPCL-040701</span>  <br>
+ <b>Rs. <span id="price9">220,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty9"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s9"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Shirt: Bodice is worked with nakshi, crystals, sequins, resham and French knots. Shirt back bodice has a sequin embellished floral jaal. Bodice, center front and hem of shirt have nakshi border. Jaal on front and back of shirt embellished with nakshi, crystals, sequins and French knots. Sleeves have chan on sequins and pearls with a Swarovski crystal embellished cuff.</p>
+</div>
+
+<div id="mywork9" style="display:none;"> <img  src="Image/Luxury dress/0000498_velvet-applique-jacket.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Gold Fern<br>
+ <b>Product Code</b> <span id="code10" >VAKJ-0451</span>  <br>
+ <b>Rs. <span id="price10">200,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty10" > <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s10"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Front neckline embellished with crystals and dabka. Resham with sequin and bead jaal all over the shirt. Booti chann in dabka, Resham and crystals. Back is an appliqu&eacute; jaal. Front and back borders are dabka, sequins, crystals and beads. Double weave jamawar finish.</p>
+</div>
+  
+<div id="mywork10" style="display:none;"> <img  src="Image/Luxury dress/0000487_cream-floral-bouquet.jpeg" width="150" class="modalimg"><b>Name:-</b>Cream Floral <br>
+ <b>Product Code</b> <span id="code11" >CRFB-02211</span> <br>
+ <b>Rs. <span id="price11">240,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty11"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s11"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Front open borders handworked with dabka, nakshi, crystals and sequins. Bodice handworked with French knots, dabka, crystals and sequins. Floral threadwork embellished with sequins and beads on the center panel. Floral threadwork embellished with sequins and beads on the back panel. Cream threadwork embellished with sequins, beads and crystals on side panels. Embroidered floral trellis on along the daman embellished with sequins, beads and crystals. Handworked border in sequins, beads and crystals. Double weave jamawar finish.</p>
+</div>
+
+<div id="mywork11" style="display:none;"> <img  src="Image/Luxury dress/0000367_teal-blue-jacket.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Teal blue Jacket<br>
+ <b>Product Code</b><span id="code12" >ODT-02331</span>  <br>
+ <b>Rs.<span id="price12"> 160,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty12"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+ </select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s12"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Jacket (Velvet with brocade lining). Enriched with dabka, nakshi, sequins, crystals, aari resham and French knots.</p>
+</div>
+
+<div id="mywork12" style="display:none;"> <img  src="Image/Luxury dress/0000361_saffron-orange-net-dress.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Saffron Orange Net<br>
+ <b>Product Code</b><span id="code13" > SFOND-42102</span>  <br>
+ <b>Rs. <span id="price13">150,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty13"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s13" > <option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Fully worked bodice with dabka, nakshi, tilla and tikki stones. Gathered net with tilla work all over and cutworked hem with brocade lining. Dupatta (Net). Embellished with kamdani, gota, nakshi, sequins and crystals. Bordered with velvet and gota lace.</p>
+</div>
+<div id="mywork13" style="display:none;"> <img  src="Image/Luxury dress/0000322_cream-rose-bridal-shirt.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Cream Rose Bridal<br>
+ <b>Product Code</b> <span id="code14" >REBS-003812</span>  <br>
+ <b><span id="price14">34234</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty14"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s14"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Bodice bedecked with a velvet applique neckline worked with crystals, nakshi and dabka. Floral motifs all over bodice with sequins and French knots. An embellished jaal with sequins, crystals and nakshi on the front bodice. Bottom, both back and front, embellished with resham embroidery, French knots, sequins, crystals, dabka, nakshi and beads. Embellished floral motifs all over. Button down back bodice.</p>
+</div>
+
+
+   <div class="modal-footer">   
+    <button type="button"  class="btn btn-default cart1" data-dismiss="modal" onClick="cart();">Add to Cart</button>
+   <button type="button"  class="btn btn-default" data-dismiss="modal" onClick="abc1();">Close</button>
+   
+   </div>
+   
+   </div>
+   </div>
+   </div>       
+          
+     </div>
+    
+     </div></div>
+      <script src="javascript/script2.js"></script>
+      
+      <script src="javascript/close script.js"></script>
+ </section>
+ <!-- InstanceEndEditable -->
+ <footer>
+<div class="navbar-inverse navbar-static-bottom">
+<div class="container-fluid full">
+<div class="line2"></div>
+<div  id="option" class="navbar-text pull-left extra2">&copy; Copyright <b>Fashion Collection</b> All Rights Reserved </div>
+<div class="navbar-text pull-right extra" ><h4 style="float:left;">LIKE & Follow us</h4> &nbsp;&nbsp;&nbsp;&nbsp;<img src="Image/link/facebook-icon.png" width="30"  class="img3" onclick="window.open('https://www.facebook.com')"> &nbsp;&nbsp;&nbsp;&nbsp;
+<img src="Image/link/twitter-icon%20(1).png" width="30"  class="img3" onclick="window.open('https://twitter.com/')">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="Image/link/instagram-icon-circle-vector-logo.png" width="30"  class="img3" onclick="window.open('https://www.instagram.com/?hl=en')">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="Image/link/Pinterest_Favicon.png" width="30" class="img3"  onclick="window.open('https://www.pinterest.com/')">&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+ </div>
+</div>
+</div>
+
+
+
+</footer>
+  </body>
+<!-- InstanceEnd --></html>

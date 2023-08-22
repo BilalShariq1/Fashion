@@ -1,0 +1,225 @@
+ <!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/index.dwt" codeOutsideHTMLIsLocked="false" --><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Fashion Collection</title>
+    <!-- InstanceEndEditable -->
+    <!-- Bootstrap -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet"  >
+    <link href="css/custon.css" rel="stylesheet" type="text/css" id="red" >
+    <link href="css/42882f.css"  rel="stylesheet" type="text/css" id="green" disabled >   
+    <link href="css/238cc0.css"  rel="stylesheet" type="text/css" id="blue" disabled >   
+    <link href="css/ee910c.css"  rel="stylesheet" type="text/css" id="yellow" disabled >   
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <script src="js/js.js"></script> 
+    <script src="javascript/color.js"> </script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="javascript/logn.js"> </script>
+	<script src="js/bootstrap.min.js"> </script> 
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn"t work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 
+    <style>
+	*{padding:0px auto;
+	margin:0px auto;}
+	
+    </style>
+
+
+</head >
+  <body>
+   
+<header> 
+<div class="container-fluid"  id="fc">
+  <div class="row row1" >
+    <div class="col-md-9 pull-left col2"> <marquee scrollamount="3"><b>Price Update:-</b><strong>Cappuciio</strong> Rs:-18,000/= &nbsp;&nbsp;&nbsp; <strong>Lattics Gardent</strong> Rs:-15,000/= &nbsp;&nbsp;&nbsp; <strong>Malika Art</strong> Rs:-10,000/=&nbsp;&nbsp;&nbsp; <strong>Cinza Art</strong> Rs:-13,000/=&nbsp;&nbsp;&nbsp;<strong>Cream Rose</strong> Rs:- Coming Soon&nbsp;&nbsp;&nbsp;<strong>Vahalla</strong> Rs:-240,000/=&nbsp;&nbsp;&nbsp;<strong>Fire ice</strong>  Rs:-150,000/=&nbsp;&nbsp;&nbsp;<strong>Hanging</strong> Rs:-55,000/=&nbsp;&nbsp;&nbsp;<strong>Primrose</strong> Rs:-45,000/=&nbsp;&nbsp;&nbsp;<strong>Poison Lay</strong> Rs:-23,000/=</marquee></div>
+   
+    <div class="col-md-3 pull-right col3" >
+    <a href="#" data-toggle="modal" data-target="#mymodal"  id="lg"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a>&nbsp;&nbsp;<a href="#" id="lg1" style="display:none; float:right; font-weight:bold" onClick="lgut();"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a>&nbsp;&nbsp;  <a href="#"><strong>|</strong></a> &nbsp;&nbsp; <a href="registration.html" id="reg"  style="display:block; float:right; "> Registration</a>&nbsp;&nbsp; <a  id="cart" href="#" data-toggle="modal" data-target="#mymodal2" style="float:right;" ><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;MyCart&nbsp;&nbsp;<strong>|</strong>&nbsp;</a></div>  
+  </div>
+
+<div class="modal fade" id="mymodal2" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header" style="text-align:center;">Cart List<button type="button" class="close" data-dismiss="modal">&times;</button> </div>
+<div class="modal-body">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-4" style="text-align:center"><strong>Product Code</strong> </div>
+<div class="col-md-2 col-sm-2 col-xs-2" style="text-align:center" ><strong> Quantity</strong></div>
+<div class="col-md-3 col-sm-3 col-xs-3" style="text-align:center"><strong>Size</strong></div>
+<div class="col-md-3 col-sm-3 col-xs-3" style="text-align:center"><strong>Price</strong></div> 
+
+
+</div><br>
+<br>
+
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-4" ><ol id="code"></ol></div>
+<div class="col-md-2 col-sm-2 col-xs-2"><ul id="qty"></ul></div>
+<div class="col-md-3 col-sm-3 col-xs-3"><ul id="size"></ul></div>
+<div class="col-md-3 col-sm-3 col-xs-3"><ul id="price"></ul></div>
+
+
+</div>
+
+
+</div>
+<div class="modal-footer"><button type="button" class="btn btn-default" onClick="order();"  data-dismiss="modal" >Order</button></div>
+
+</div>
+</div>
+</div>
+
+  <div id="mymodal" class="modal fade" role="dialog"> 
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">LOGIN<button type="button" class="close" data-dismiss="modal">&times;</button> </div>
+<div class="modal-body"><form role="form" id="formlogin" name="f1" >
+<div class="form-group"><label id="label">Username</label>
+<input type="text" name="t1" placeholder="Username" class="form-control" ></div><div class="form-group">
+<label>Password</label><input type="password" name="t2" placeholder="Password" class="form-control"   >
+</div>
+</form> </div>
+<div class="modal-footer"><button type="button" class="btn btn-default" onClick="lgin();"  data-dismiss="modal" >Login</button> </div>
+</div></div></div>
+
+ <a href="about_us.html" style="text-decoration:none;"><h1 class="h1" style="font-size:36px; text-align:center"><span class="spanfnt">Fashion</span> Collection</h1>  </a>
+
+</div>
+</header> 
+
+
+<div class="navbar   navbar-inverse navbar-static-top"  id="nav"  data-spy="affix" data-offset-top="75">
+<div class="container"> 	  <div class="navbar-header">  
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">  
+ 
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+  <!-- InstanceBeginEditable name="EditRegion3" --><link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <div class="collapse navbar-collapse" style=" text-align:left">
+    <ul class="nav navbar-nav nav-justified" style="color:white;" >
+      <li> </li>
+      <li> </li>
+      <li ><a href="index.html">Home</a></li>
+      <li ><a href="new-collection.html">New Collection</a></li>
+      <li><a href="Pret.html">Pret</a></li>
+      <li><a href="luxury dress.html">Luxury Dress</a></li>
+      <li ><a href="contact us.html">Contact Us</a></li>
+      <li> </li>
+      <li> </li>
+    </ul>
+  </div>
+  <!-- InstanceEndEditable --></div> 
+   </div>
+
+<div class="container-fluid sidebar"><div class="row"> <div class="col-md-12"> <ul class="nav navbar-nav navbar  navmy"> <li style="background:#42882f;" onClick="game();" class="remove1"></li><li onClick="game1();" style="background:#ee910c;" class="remove2"></li><li style="background:#238cc0;" class="remove3" onClick="game2();"></li><li onClick="game3();" style="background:#c00;" class="remove"></li> </ul> </div> </div> 
+</div> 
+<!-- InstanceBeginEditable name="EditRegion2" -->
+<section >
+   <div class="container-fluid full" style="margin-top:-20px !important;"><div class="row"><div class="col-md-12"><div class="banner newbanner  newbanner1"> <h2 class="h2 h21"> Registration<br>
+Form&nbsp </h2></div> <img src="Image/banner-20off.jpg" class="img4"> </div> </div> </div>
+
+</section>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="EditRegion1" -->
+
+<section style="background:black;margin-top:-20px;"><br><br>
+<div class="container color"  > 
+
+
+<div class="row "><div class="col-md-8 col-center " > <br>
+<br>
+
+<div class="row " >
+<div class="col-md-6  fbcol" onClick="window.open('https://en-gb.facebook.com/login/','name','width=600,height=400')" style="cursor:pointer;">
+ <h3 >  <span class="fa fa-facebook-f fbn"></span> Login With Facebook</h3></a> 
+
+</div>
+<div class="col-md-6 gmcol" onClick="window.open('https://accounts.google.com/login#identifier','name','width=600,height=400')" style="cursor:pointer;">
+ <h3 ><span class="fa fa-google-plus gmn"> </span> Sign in With Google+</h3> 
+
+</div>
+
+</div>
+
+
+<br> <br>
+<form role="form" class="form"  >
+<h2>Sign Up Please <small>It's free and always will be.</small></h2>
+<hr class="newcolor">
+<div class="row">  
+<div class="col-xs-6 col-sm-6 col-md-6"><div class="form-group">
+<input class="form-control" type="text" placeholder="UserName"  required  > </div></div>
+<div class="col-xs-6 col-sm-6 col-md-6"><div class="form-group" >
+<input class="form-control" type="text" placeholder="E-mail address"  required>
+</div></div></div>
+<div class="row"><div class="col-xs-6 col-sm-6 col-md-6"><div class="form-group">
+<input class="form-control" type="password" placeholder="Password" required ></div>
+</div><div class="col-xs-6 col-sm-6 col-md-6"><div class="form-group">
+<input class="form-control" type="password" placeholder="Repeat Password" required >
+</div></div></div>
+<div class="row"><div class="col-xs-4 col-sm-4 col-md-4"><div class="form-group">
+<select class="form-control"   ><option>Month</option><option>January</option><option>Febuary</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option> </select>
+</div></div><div class="col-xs-4 col-sm-4 col-md-4"><div class="form-group">
+<input class="form-control"  type="text" placeholder="Day"  required >
+</div></div><div class="col-xs-4 col-sm-4 col-md-4"><div class="form-group">
+<input class="form-control"  type="text" placeholder="Year"  required>
+</div></div></div>
+<div class="row"><div class="col-xs-6 col-sm-6 col-md-6"><div class="form-group">
+<select class="form-control "  ><option>I am...</option><option>Male</option><option>Female</option>  </select>
+</div></div><div class="col-xs-6 col-sm-6 col-md-6"><div class="form-group">
+<input class="form-control"  type="text" placeholder="Mobile #" required ><br>
+
+</div></div></div>
+
+
+ 
+
+<input type="submit" value=" Register " class="btn  center-block regbtn" /><br>
+<br>
+<br>
+
+
+
+
+</form> </div></div>
+
+ 
+</div>
+    
+ </section>
+ <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+ <style> #lg {display:none;}</style>
+ <!-- InstanceEndEditable -->
+ <footer>
+<div class="navbar-inverse navbar-static-bottom">
+<div class="container-fluid full">
+<div class="line2"></div>
+<div  id="option" class="navbar-text pull-left extra2">&copy; Copyright <b>Fashion Collection</b> All Rights Reserved </div>
+<div class="navbar-text pull-right extra" ><h4 style="float:left;">LIKE & Follow us</h4> &nbsp;&nbsp;&nbsp;&nbsp;<img src="Image/link/facebook-icon.png" width="30"  class="img3" onclick="window.open('https://www.facebook.com')"> &nbsp;&nbsp;&nbsp;&nbsp;
+<img src="Image/link/twitter-icon%20(1).png" width="30"  class="img3" onclick="window.open('https://twitter.com/')">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="Image/link/instagram-icon-circle-vector-logo.png" width="30"  class="img3" onclick="window.open('https://www.instagram.com/?hl=en')">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="Image/link/Pinterest_Favicon.png" width="30" class="img3"  onclick="window.open('https://www.pinterest.com/')">&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+ </div>
+</div>
+</div>
+
+
+
+</footer>
+  </body>
+<!-- InstanceEnd --></html>

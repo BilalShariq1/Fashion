@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script>
+    function abc(n1){
+	
+	var a = n1
+	 
+	if (a == "pic1" ){	
+	
+	 document.getElementById("pic1").style.display="block";
+	
+	}
+	
+	else if(a == "pic2" ){
+	document.getElementById("pic2").style.display="block"; 
+	
+	}
+	else if(a == "pic3" ){
+	document.getElementById("pic3").style.display="block"; 
+	
+	}
+	}
+   function abc1(){
+	    
+	   var pic1 = document.getElementById("pic1").style.display ;
+	    var pic2 = document.getElementById("pic2").style.display ;
+	    var pic3 = document.getElementById("pic3").style.display ;
+	   if ( pic1 == "block")
+	   { 
+	   
+	   document.getElementById("pic1").style.display="none";
+	   }
+	   
+	   else if ( pic2 == "block")
+	   { 
+	   
+	   document.getElementById("pic2").style.display="none";
+	   }
+	   else if ( pic3 == "block")
+	   { 
+	   
+	   document.getElementById("pic3").style.display="none";
+	   }
+	   } 
+    function xxx(){
+	document.getElementById("pic1").style.display="none";
+document.getElementById("pic2").style.display="none";
+document.getElementById("pic3").style.display="none";
+	   
+		
+		}
+    </script>
+  </head>
+  <body>
+    <div class="container" > <a href="#" onClick="abc(pic1.name);" data-toggle="modal" data-target="#mymodal"> <img src="Image/link/twitter-icon (1).png" width="50"  name="pic1"  > 
+     <div class="btn btn-default">shop Now</div> </a> <a href="#" onClick="abc(pic2.name);" data-toggle="modal" data-target="#mymodal"><img src="Image/link/instagram-icon-circle-vector-logogrey.png" width="50"  name="pic2"  ><div class="btn btn-default">shop Now</div></a>
+     </a> <a href="#" onClick="abc(pic3.name);" data-toggle="modal" data-target="#mymodal"><img src="Image/link/Pinterest_Favicon.png" width="50"  name="pic3"  ><div class="btn btn-default">shop Now</div></a>
+    
+  
+   <div id="mymodal" class="modal" role="dialog">
+   <div class="modal-dialog">
+   <div class="modal-content">
+   <div class="modal-header">Product Detail</div>
+   <div class="modal-body"> 
+   <img id="pic1" src="Image/link/twitter-icon (1).png" style="display:none; width:50%">
+   
+   <img id="pic2" src="Image/link/instagram-icon-circle-vector-logogrey.png" style="display:none; width:50%">
+   <img id="pic3" src="Image/link/Pinterest_Favicon.png" style="display:none; width:50%"></div>
+   <div class="modal-footer">
+   <button type="button"  class="btn btn-default" data-dismiss="modal" onClick="xxx();">Close All</button>
+   <button type="button"  class="btn btn-default" data-dismiss="modal" onClick="abc1();">Close</button>
+   
+   </div>
+   
+   </div>
+   </div>
+   </div>
+    
+    
+  </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

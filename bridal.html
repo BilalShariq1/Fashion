@@ -1,0 +1,446 @@
+ <!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/index.dwt" codeOutsideHTMLIsLocked="false" --><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Fashion Collection</title>
+    <!-- InstanceEndEditable -->
+    <!-- Bootstrap -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet"  >
+    <link href="css/custon.css" rel="stylesheet" type="text/css" id="red" >
+    <link href="css/42882f.css"  rel="stylesheet" type="text/css" id="green" disabled >   
+    <link href="css/238cc0.css"  rel="stylesheet" type="text/css" id="blue" disabled >   
+    <link href="css/ee910c.css"  rel="stylesheet" type="text/css" id="yellow" disabled >   
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <script src="js/js.js"></script> 
+    <script src="javascript/color.js"> </script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="javascript/logn.js"> </script>
+	<script src="js/bootstrap.min.js"> </script> 
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn"t work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 
+    <style>
+	*{padding:0px auto;
+	margin:0px auto;}
+	
+    </style>
+
+
+</head >
+  <body>
+   
+<header> 
+<div class="container-fluid"  id="fc">
+  <div class="row row1" >
+    <div class="col-md-9 pull-left col2"> <marquee scrollamount="3"><b>Price Update:-</b><strong>Cappuciio</strong> Rs:-18,000/= &nbsp;&nbsp;&nbsp; <strong>Lattics Gardent</strong> Rs:-15,000/= &nbsp;&nbsp;&nbsp; <strong>Malika Art</strong> Rs:-10,000/=&nbsp;&nbsp;&nbsp; <strong>Cinza Art</strong> Rs:-13,000/=&nbsp;&nbsp;&nbsp;<strong>Cream Rose</strong> Rs:- Coming Soon&nbsp;&nbsp;&nbsp;<strong>Vahalla</strong> Rs:-240,000/=&nbsp;&nbsp;&nbsp;<strong>Fire ice</strong>  Rs:-150,000/=&nbsp;&nbsp;&nbsp;<strong>Hanging</strong> Rs:-55,000/=&nbsp;&nbsp;&nbsp;<strong>Primrose</strong> Rs:-45,000/=&nbsp;&nbsp;&nbsp;<strong>Poison Lay</strong> Rs:-23,000/=</marquee></div>
+   
+    <div class="col-md-3 pull-right col3" >
+    <a href="#" data-toggle="modal" data-target="#mymodal"  id="lg"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a>&nbsp;&nbsp;<a href="#" id="lg1" style="display:none; float:right; font-weight:bold" onClick="lgut();"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a>&nbsp;&nbsp;  <a href="#"><strong>|</strong></a> &nbsp;&nbsp; <a href="registration.html" id="reg"  style="display:block; float:right; "> Registration</a>&nbsp;&nbsp; <a  id="cart" href="#" data-toggle="modal" data-target="#mymodal2" style="float:right;" ><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;MyCart&nbsp;&nbsp;<strong>|</strong>&nbsp;</a></div>  
+  </div>
+
+<div class="modal fade" id="mymodal2" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header" style="text-align:center;">Cart List<button type="button" class="close" data-dismiss="modal">&times;</button> </div>
+<div class="modal-body">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-4" style="text-align:center"><strong>Product Code</strong> </div>
+<div class="col-md-2 col-sm-2 col-xs-2" style="text-align:center" ><strong> Quantity</strong></div>
+<div class="col-md-3 col-sm-3 col-xs-3" style="text-align:center"><strong>Size</strong></div>
+<div class="col-md-3 col-sm-3 col-xs-3" style="text-align:center"><strong>Price</strong></div> 
+
+
+</div><br>
+<br>
+
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-4" ><ol id="code"></ol></div>
+<div class="col-md-2 col-sm-2 col-xs-2"><ul id="qty"></ul></div>
+<div class="col-md-3 col-sm-3 col-xs-3"><ul id="size"></ul></div>
+<div class="col-md-3 col-sm-3 col-xs-3"><ul id="price"></ul></div>
+
+
+</div>
+
+
+</div>
+<div class="modal-footer"><button type="button" class="btn btn-default" onClick="order();"  data-dismiss="modal" >Order</button></div>
+
+</div>
+</div>
+</div>
+
+  <div id="mymodal" class="modal fade" role="dialog"> 
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">LOGIN<button type="button" class="close" data-dismiss="modal">&times;</button> </div>
+<div class="modal-body"><form role="form" id="formlogin" name="f1" >
+<div class="form-group"><label id="label">Username</label>
+<input type="text" name="t1" placeholder="Username" class="form-control" ></div><div class="form-group">
+<label>Password</label><input type="password" name="t2" placeholder="Password" class="form-control"   >
+</div>
+</form> </div>
+<div class="modal-footer"><button type="button" class="btn btn-default" onClick="lgin();"  data-dismiss="modal" >Login</button> </div>
+</div></div></div>
+
+ <a href="about_us.html" style="text-decoration:none;"><h1 class="h1" style="font-size:36px; text-align:center"><span class="spanfnt">Fashion</span> Collection</h1>  </a>
+
+</div>
+</header> 
+
+
+<div class="navbar   navbar-inverse navbar-static-top"  id="nav"  data-spy="affix" data-offset-top="75">
+<div class="container"> 	  <div class="navbar-header">  
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">  
+ 
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+  <!-- InstanceBeginEditable name="EditRegion3" -->
+  <div class="collapse navbar-collapse" style=" text-align:left">
+    <ul class="nav navbar-nav nav-justified" style="color:white;" >
+      <li> </li>
+      <li> </li>
+      <li ><a href="index.html">Home</a></li>
+      <li><a href="new-collection.html">New Collection</a></li>
+      <li><a href="Pret.html">Pret</a></li>
+      <li ><a href="luxury dress.html">Luxury Dress</a></li>
+      <li ><a href="contact us.html">Contact Us</a></li>
+      <li> </li>
+      <li> </li>
+    </ul>
+  </div>
+  <!-- InstanceEndEditable --></div> 
+   </div>
+
+<div class="container-fluid sidebar"><div class="row"> <div class="col-md-12"> <ul class="nav navbar-nav navbar  navmy"> <li style="background:#42882f;" onClick="game();" class="remove1"></li><li onClick="game1();" style="background:#ee910c;" class="remove2"></li><li style="background:#238cc0;" class="remove3" onClick="game2();"></li><li onClick="game3();" style="background:#c00;" class="remove"></li> </ul> </div> </div> 
+</div> 
+<!-- InstanceBeginEditable name="EditRegion2" -->
+<section >
+   <div class="container-fluid full" style="margin-top:-20px !important;"><div class="row"><div class="col-md-12"><div class="banner"> <h2 class="h2">&nbsp;&nbsp;Bridal Dresses&nbsp;&nbsp;</h2><div class="line3"></div></div> <img src="Image/Bridal/Untitled-1.jpg" class="img4"> </div> </div> </div>
+</section>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="EditRegion1" -->
+<section style="background:black;"><br><br>
+    <div class="container black" >
+  <div class="row">
+       <div class="col-md-3"><img src="Image/Bridal/0000293_alabaster-bridal.jpeg" onMouseOver="this.src='Image/Bridal/0000295_alabaster-bridal.jpeg'" onMouseOut="this.src='Image/Bridal/0000293_alabaster-bridal.jpeg'" class="img2" name="pic14">
+   <h4>Alabaster Bridal</h4><h4>Rs. 180,000.00</h4>    <a href="#" onClick="abc(pic14.name);" data-toggle="modal" data-target="#mymodal1">   <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Bridal/0000300_fire-and-ice-lengha.jpeg" onMouseOver="this.src='Image/Bridal/0000301_fire-and-ice-lengha.jpeg'" onMouseOut="this.src='Image/Bridal/0000300_fire-and-ice-lengha.jpeg'" class="img2" name="pic13">
+   <h4>Fire and Ice Lengha</h4><h4>Rs. 150,000.00</h4>   <a href="#" onClick="abc(pic13.name);" data-toggle="modal" data-target="#mymodal1">   <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Bridal/0000304_venetian-gold-lengha.jpeg" onMouseOver="this.src='Image/Bridal/0000305_venetian-gold-lengha.jpeg'" onMouseOut="this.src='Image/Bridal/0000304_venetian-gold-lengha.jpeg'" class="img2" name="pic12">
+<h4>Venetian Gold </h4><h4>Rs. 160,000.00</h4>  <a href="#" onClick="abc(pic12.name);" data-toggle="modal" data-target="#mymodal1">       <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Bridal/0000326_fairy-dust-bridal-shirt.jpeg" onMouseOver="this.src='Image/Bridal/0000327_fairy-dust-bridal-shirt.jpeg'" onMouseOut="this.src='Image/Bridal/0000326_fairy-dust-bridal-shirt.jpeg'" class="img2" name="pic11">
+  <h4>Fairy Dust Bridal</h4><h4>Rs. 240,000.00</h4>  <a href="#" onClick="abc(pic11.name);" data-toggle="modal" data-target="#mymodal1">     <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+     </div> 
+     
+   <div class="row">
+       <div class="col-md-3"><img src="Image/Bridal/0000330_garnet-fiesta-bridal-shirt.jpeg" onMouseOver="this.src='Image/Bridal/0000332_garnet-fiesta-bridal-shirt.jpeg'" onMouseOut="this.src='Image/Bridal/0000330_garnet-fiesta-bridal-shirt.jpeg'" class="img2" name="pic10">
+   <h4>Garnet Fiesta Bridal</h4><h4>Rs. 200,000.00</h4> <a href="#" onClick="abc(pic10.name);" data-toggle="modal" data-target="#mymodal1">     <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Bridal/0000478_beige-net-gown.jpeg" onMouseOver="this.src='Image/Bridal/0000479_beige-net-gown.jpeg'" onMouseOut="this.src='Image/Bridal/0000478_beige-net-gown.jpeg'" class="img2" name="pic9">
+    <h4>Beige net Gown</h4><h4>Rs. 220,000.00</h4> <a href="#" onClick="abc(pic9.name);" data-toggle="modal" data-target="#mymodal1">     <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Bridal/0000769_valhalla-opus.jpeg" onMouseOver="this.src='Image/Bridal/0000770_valhalla-opus.jpeg'" onMouseOut="this.src='Image/Bridal/0000769_valhalla-opus.jpeg'" class="img2" name="pic8">
+ <h4>Valhalla Opus</h4><h4>Rs. 240,000.00</h4> <a href="#" onClick="abc(pic8.name);" data-toggle="modal" data-target="#mymodal1">        <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Bridal/0000774_desert-sage.jpeg" onMouseOver="this.src='Image/Bridal/0000802_desert-sage.jpeg'" onMouseOut="this.src='Image/Bridal/0000774_desert-sage.jpeg'" class="img2" name="pic7">
+  <h4>Desert Sage</h4><h4>Rs. 280,000.00</h4><a href="#" onClick="abc(pic7.name);" data-toggle="modal" data-target="#mymodal1">       <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+     </div>     
+     
+       <div class="row">
+       <div class="col-md-3"><img src="Image/Bridal/0000776_albertine-blossom.jpeg" onMouseOver="this.src='Image/Bridal/0000777_albertine-blossom.jpeg'" onMouseOut="this.src='Image/Bridal/0000776_albertine-blossom.jpeg'" class="img2" name="pic6">
+    <h4>Albertine Blossom</h4><h4>Rs. 240,000.00</h4>  <a href="#" onClick="abc(pic6.name);" data-toggle="modal" data-target="#mymodal1">    <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Bridal/0000779_magdelina.jpeg" onMouseOver="this.src='Image/Bridal/0000801_magdelina.jpeg'" onMouseOut="this.src='Image/Bridal/0000779_magdelina.jpeg'" class="img2" name="pic5">
+  <h4>Magdelina</h4><h4>Rs. 220,000.00</h4> <a href="#" onClick="abc(pic5.name);" data-toggle="modal" data-target="#mymodal1">      <div class="btn join2">SHOP NOW </div> </a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Bridal/0000783_amaryllis-gold.jpeg" onMouseOver="this.src='Image/Bridal/0000784_amaryllis-gold.jpeg'" onMouseOut="this.src='Image/Bridal/0000783_amaryllis-gold.jpeg'" class="img2" name="pic4">
+  <h4>Amaryllis Gold</h4><h4>Rs. 190,000.00</h4> <a href="#" onClick="abc(pic4.name);" data-toggle="modal" data-target="#mymodal1">      <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Bridal/0000789_naurattan.jpeg" onMouseOver="this.src='Image/Bridal/0000790_naurattan.jpeg'" onMouseOut="this.src='Image/Bridal/0000789_naurattan.jpeg'" class="img2" name="pic3">
+      <h4>Naurattan</h4><h4>Rs. 240,000.00</h4>  <a href="#" onClick="abc(pic3.name);" data-toggle="modal" data-target="#mymodal1"> <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+     </div>
+  
+         <div class="row">
+       <div class="col-md-3"><img src="Image/Bridal/0000794_a-raised-ethereal.jpeg" onMouseOver="this.src='Image/Bridal/0000795_a-raised-ethereal.jpeg'" onMouseOut="this.src='Image/Bridal/0000794_a-raised-ethereal.jpeg'" class="img2" name="pic2">
+      <h4>Rasied Ethereal</h4><h4>Rs. 230,000.00</h4><a href="#" onClick="abc(pic2.name);" data-toggle="modal" data-target="#mymodal1">     <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/Bridal/0002159_ultra-marine (1).jpeg" onMouseOver="this.src='Image/Bridal/0002160_ultra-marine.jpeg'" onMouseOut="this.src='Image/Bridal/0002159_ultra-marine (1).jpeg'" class="img2" name="pic1">
+       <h4>Ultra Marina</h4><h4>Rs. 200,000.00</h4><a href="#" onClick="abc(pic1.name);" data-toggle="modal" data-target="#mymodal1">  <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+      <div class="col-md-3"><img src="Image/Bridal/0002162_romanov.jpeg" onMouseOver="this.src='Image/Bridal/0002163_romanov.jpeg'" onMouseOut="this.src='Image/Bridal/0002162_romanov.jpeg'" class="img2" name="pic15">
+       <h4>ROMANOV</h4><h4>Rs. 200,000.00</h4><a href="#" onClick="abc(pic15.name);" data-toggle="modal" data-target="#mymodal1">  <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+      
+    <div id="mymodal1" class="modal" role="dialog">
+   <div class="modal-dialog">
+   <div class="modal-content">
+   <div class="modal-header"> Product Detail</div>
+   <div class="modal-body mycolor">
+   
+   <div id="mywork" style="display:none;"> <img id="pic1" src="Image/Bridal/0002159_ultra-marine (1).jpeg"  width="150" class="modalimg" ><b>Name:-</b>Ultra Marine<br>
+ <b>Product Code</b> <span id="code1" >URME-00231</span>  <br>
+ <b>Rs. <span id="price1">200,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty1" > <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s1" ><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Organza kameez with spaghetti strap embellished with beads, crystals and resham. Neckline embellished with Swarovski crystals and resham. Shirt front embellished with floral embroidery of beads, resham, tilla and sequins. Tilla embroidered branches on shirt front. Brocade finishing. Plain back. Fused raw silk culottes with hem embellished with sequins, beads and nakshi lines.</p>
+</div>
+   
+   
+   <div id="mywork1" style="display:none;"> <img  src="Image/Bridal/0000794_a-raised-ethereal.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Raised Ethereal<br>
+ <b>Product Code</b> <span id="code2" >RDEL-00981</span>   <br>
+ <b>Rs. <span id="price2">230,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select  style="width:60px !important; " id="qty2"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s2"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Boat neck net shirt with bell sleeves. Gold tilla embroidery on neckline and daaman embellished with sequins, beads, Swarovski crystals and kutdaanas. Embellished trellises on shirt front. Sleeves are also embellished. Plain back. Brocade choli underneath shirt. Screen print culottes. </p>
+</div>
+
+<div id="mywork2" style="display:none;"> <img  src="Image/Bridal/0000789_naurattan.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Naurattan<br>
+ <b>Product Code</b> <span id="code3" >NRN-08881</span>  <br>
+ <b>Rs. <span id="price3">240,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty3"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s3"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Front and back has cut dana and Swarovski beads jaal. Center front border, front and back hem, sleeve and back motif is worked with sequins, dabka nakshi, Swarovski beads, resham and French knots. Sleeve cuff embellished with sequins, dabka nakshi and Swarovski crystals.</p>
+</div> 
+
+<div id="mywork3" style="display:none;"> <img  src="Image/Bridal/0000783_amaryllis-gold.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Amaryllis Gold <br>
+ <b>Product Code</b> <span id="code4" >BLTR-056681</span>  <br>
+ <b>Rs. <span id="price4">190,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty4"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s4"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Front has bootis of resham, dabka nashi, Swarovski beads and crystals. Choli back has jaal of nakshi, sequins, swarovski beads, crystals and cut dana. Sleeves are on gold tissue fabric and have a cuff with gold buttons. Choli is completely worked with sequins, Swarovski crystals and cut dana. Paanch pati sequins and bead chan all over. Crystals and pearl drops on front and back waist hem. Embellished tassels</p>
+</div>
+
+<div id="mywork4" style="display:none;"> <img  src="Image/Bridal/0000779_magdelina.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Magdelina<br>
+ <b>Product Code</b> <span id="code5" >MDLN-05641</span>  <br>
+ <b>Rs. <span id="price5">220,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty5"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s5"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Front and back bodice is embellished with Swarovski crystals and beads dabka nakshi, cut dana, sequins, and resham. Sleeves are fully worked as well with Swarovski crystal and dabka jaali on sleeve bicep. Shirt has chan of sequins, cut dana, Swarovski crystals and dabka all over. Cut work on sleeve hem with gold ball finishing. Velvet finishing on hem. Bodice slit with brocade choli underneath. Belt embellished with crystals, sequins, crystals and beads.</p>
+</div>
+
+<div id="mywork5" style="display:none;"> <img  src="Image/Bridal/0000776_albertine-blossom.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Bronze Net<br>
+ <b>Product Code</b> <span id="code6" >Albertine</span>  <br>
+ <b>Rs. <span id="price6">240,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty6"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s6"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Front, back and sleeves are heavily embellished with crystal, pearls, sequins and cut dana jaali motifs as well as floral tilla embroidery. Swarovski crystal embellishment on jaali motifs. Cutwork on shirt front and back. Off-the-shoulder shirt.</p>
+</div>
+
+<div id="mywork6" style="display:none;"> <img  src="Image/Bridal/0000774_desert-sage.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Desert Sage<br>
+ <b>Product Code</b> <span id="code7" >DSST-00414</span>  <br>
+ <b>Rs. <span id="price7">280,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; "  id="qty7"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; "  id="s7"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Heavily embellished all over with sequin, resham French knots, tilla, cut dana, nakshi, Swarovski crystals, pearls, gota florals and beads. Centre front narrow border is worked with cut daana, resham, Swarovski crystals and bead. Cutwork on hem with Swarovski bead touching.</p>
+</div>
+
+<div id="mywork7" style="display:none;"> <img  src="Image/Bridal/0000769_valhalla-opus.jpeg"  width="150" class="modalimg" ><b>Name:-</b>Valhalla Opus<br>
+ <b>Product Code</b> <span id="code8" >VLOS-045709</span>  <br>
+ <b>Rs. <span id="price8" >240,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty8"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s8"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Choli: Front fully embellished with nakshi, tilla, french knots, sequins, crystals and cut dana. Cotton silk straps. Cutwork on front neckline and hem. Plain back. Cotton silk finishing.</p>
+</div>
+<div id="mywork8" style="display:none;"> <img  src="Image/Bridal/0000478_beige-net-gown.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Beige Net Gown<br>
+ <b>Product Code</b> <span id="code9" >BNN-040701</span>  <br>
+ <b>Rs. <span id="price9">220,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty9"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; "id="s9" ><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Neckline embellished in jewelry necklace pattern in dabka, crystals and sequins. Back neckline embellished in jewelry necklace pattern in dabka, crystals and sequins. Chann of sequins, beads, crystals, dabka and kundun on center panel. Chann of french knots, sequins, beads, crystals and dabka on side panels. Bareek border above daman in sequins, beads, crystals, french knots and dabka. Wide border in sequins, beads, crystals, french knots, reshaam and dabka. Double weave jamawar finish.</p>
+</div>
+
+<div id="mywork9" style="display:none;"> <img  src="Image/Bridal/0000330_garnet-fiesta-bridal-shirt.jpeg"  width="150" class="modalimg" ><b>Name:-</b> GGarnet Fiesta Bridal<br>
+ <b>Product Code</b> <span id="code10" >GDR-06701</span>  <br>
+ <b>Rs. <span id="price10">200,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty10"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s10"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Choli: Front embellished with tilla work.
+Lehnga: Embellished with tilla work trellises.
+Dupatta: Broad tilla border on pallus and smaller tilla border on sides.</p>
+</div>
+  
+<div id="mywork10" style="display:none;"> <img  src="Image/Bridal/0000326_fairy-dust-bridal-shirt.jpeg" width="150" class="modalimg" ><b>Name:-</b> Fairy Dust Bridal <br>
+ <b>Product Code</b> <span id="code11" >BLSS-09211</span>  <br>
+ <b>Rs.  <span id="price11">240,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty11"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s11"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Shirt (Maisuri net with maisuri silk lining). Fully embroidered with dabka, nakshi, sequins, French knots, resham, pearls and crystals. Cutwork neck and hem. Bottom (Chamoisewith silk lining). Embroidered with tilla on hem with cut work.</p>
+</div>
+
+<div id="mywork11" style="display:none;"> <img  src="Image/Bridal/0000304_venetian-gold-lengha.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Venetian<br>
+ <b>Product Code</b> <span id="code12" >VNGD-02331</span>  <br>
+ <b>Rs. <span id="price12">160,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty12"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s12"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Shirt (Net with silk lining). Fully embroidered with dabka, nakshi, sequins, French knots, badla and crystals.</p>
+</div>
+
+<div id="mywork12" style="display:none;"> <img  src="Image/Bridal/0000300_fire-and-ice-lengha.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Fire & Ice Lengha<br>
+ <b>Product Code</b> <span id="code13" >FILA-01252</span>  <br>
+ <b>Rs. <span id="price13">150,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty13"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s13"> <option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal"><b>Lengha:</b> Fully embroidered with dabka, nakshi, crystals, French knot and badla.
+<br><b>Choli:</b> Embellished booti work all over and beautified with dabka, nakshi, beads and crystals. Net sleeves enriched with bunches of sequins.</p>
+</div>
+<div id="mywork13" style="display:none;"> <img  src="Image/Bridal/0000293_alabaster-bridal.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Alabaster Bridal<br>
+ <b>Product Code</b> <span id="code14" >LBR-001744</span>  <br>
+ <b>Rs. <span id="price14">180,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty14"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s14"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Shirt (Silk Net Jaalwith brocade lining). Adorned with dabka, nakshi, tilla, crystals, resham, sequins, beads and velvet appliqu&eacute;, Cutwork hem, Ornamental tassels. Lengha (Brocade),Gota and brocade borders. Dupatta (Net)Fully embellished with aariresham and sequins, Cutwork hemlines.Embroidered border with dabka, aariresham, nakshi, crystals and tilla</p>
+</div>
+
+<div id="mywork14" style="display:none;"> <img  src="Image/Bridal/0002162_romanov.jpeg"  width="150" class="modalimg" ><b>Name:- </b>Romanov<br>
+ <b>Product Code</b> <span id="code15" >RMNV-001744 </span> <br>
+ <b>Rs. <span id="price15">200,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty15" > <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s15"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Shirt (Silk Net Jaalwith brocade lining). Adorned with dabka, nakshi, tilla, crystals, resham, sequins, beads and velvet appliqu&eacute;, Cutwork hem, Ornamental tassels. Lengha (Brocade),Gota and brocade borders. Dupatta (Net)Fully embellished with aariresham and sequins, Cutwork hemlines.Embroidered border with dabka, aariresham, nakshi, crystals and tilla</p>
+</div>
+
+   <div class="modal-footer">
+   
+    <button type="button" data-dismiss="modal" class="btn btn-default cart1"  onClick="cart();">Add to Cart</button>
+    <button type="button"  class="btn btn-default" data-dismiss="modal" onClick="abc1();" >Back</button>
+   </div>
+   
+   </div>
+   </div>
+   </div>       
+          
+     </div>
+    
+     </div></div>
+      <script src="javascript/script3.js"></script>
+ </section>
+ <!-- InstanceEndEditable -->
+ <footer>
+<div class="navbar-inverse navbar-static-bottom">
+<div class="container-fluid full">
+<div class="line2"></div>
+<div  id="option" class="navbar-text pull-left extra2">&copy; Copyright <b>Fashion Collection</b> All Rights Reserved </div>
+<div class="navbar-text pull-right extra" ><h4 style="float:left;">LIKE & Follow us</h4> &nbsp;&nbsp;&nbsp;&nbsp;<img src="Image/link/facebook-icon.png" width="30"  class="img3" onclick="window.open('https://www.facebook.com')"> &nbsp;&nbsp;&nbsp;&nbsp;
+<img src="Image/link/twitter-icon%20(1).png" width="30"  class="img3" onclick="window.open('https://twitter.com/')">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="Image/link/instagram-icon-circle-vector-logo.png" width="30"  class="img3" onclick="window.open('https://www.instagram.com/?hl=en')">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="Image/link/Pinterest_Favicon.png" width="30" class="img3"  onclick="window.open('https://www.pinterest.com/')">&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+ </div>
+</div>
+</div>
+
+
+
+</footer>
+  </body>
+<!-- InstanceEnd --></html>

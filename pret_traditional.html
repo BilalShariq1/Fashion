@@ -1,0 +1,430 @@
+ <!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/index.dwt" codeOutsideHTMLIsLocked="false" --><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Fashion Collection</title>
+    <!-- InstanceEndEditable -->
+    <!-- Bootstrap -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet"  >
+    <link href="css/custon.css" rel="stylesheet" type="text/css" id="red" >
+    <link href="css/42882f.css"  rel="stylesheet" type="text/css" id="green" disabled >   
+    <link href="css/238cc0.css"  rel="stylesheet" type="text/css" id="blue" disabled >   
+    <link href="css/ee910c.css"  rel="stylesheet" type="text/css" id="yellow" disabled >   
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <script src="js/js.js"></script> 
+    <script src="javascript/color.js"> </script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="javascript/logn.js"> </script>
+	<script src="js/bootstrap.min.js"> </script> 
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn"t work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 
+    <style>
+	*{padding:0px auto;
+	margin:0px auto;}
+	
+    </style>
+
+
+</head >
+  <body>
+   
+<header> 
+<div class="container-fluid"  id="fc">
+  <div class="row row1" >
+    <div class="col-md-9 pull-left col2"> <marquee scrollamount="3"><b>Price Update:-</b><strong>Cappuciio</strong> Rs:-18,000/= &nbsp;&nbsp;&nbsp; <strong>Lattics Gardent</strong> Rs:-15,000/= &nbsp;&nbsp;&nbsp; <strong>Malika Art</strong> Rs:-10,000/=&nbsp;&nbsp;&nbsp; <strong>Cinza Art</strong> Rs:-13,000/=&nbsp;&nbsp;&nbsp;<strong>Cream Rose</strong> Rs:- Coming Soon&nbsp;&nbsp;&nbsp;<strong>Vahalla</strong> Rs:-240,000/=&nbsp;&nbsp;&nbsp;<strong>Fire ice</strong>  Rs:-150,000/=&nbsp;&nbsp;&nbsp;<strong>Hanging</strong> Rs:-55,000/=&nbsp;&nbsp;&nbsp;<strong>Primrose</strong> Rs:-45,000/=&nbsp;&nbsp;&nbsp;<strong>Poison Lay</strong> Rs:-23,000/=</marquee></div>
+   
+    <div class="col-md-3 pull-right col3" >
+    <a href="#" data-toggle="modal" data-target="#mymodal"  id="lg"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a>&nbsp;&nbsp;<a href="#" id="lg1" style="display:none; float:right; font-weight:bold" onClick="lgut();"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a>&nbsp;&nbsp;  <a href="#"><strong>|</strong></a> &nbsp;&nbsp; <a href="registration.html" id="reg"  style="display:block; float:right; "> Registration</a>&nbsp;&nbsp; <a  id="cart" href="#" data-toggle="modal" data-target="#mymodal2" style="float:right;" ><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;MyCart&nbsp;&nbsp;<strong>|</strong>&nbsp;</a></div>  
+  </div>
+
+<div class="modal fade" id="mymodal2" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header" style="text-align:center;">Cart List<button type="button" class="close" data-dismiss="modal">&times;</button> </div>
+<div class="modal-body">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-4" style="text-align:center"><strong>Product Code</strong> </div>
+<div class="col-md-2 col-sm-2 col-xs-2" style="text-align:center" ><strong> Quantity</strong></div>
+<div class="col-md-3 col-sm-3 col-xs-3" style="text-align:center"><strong>Size</strong></div>
+<div class="col-md-3 col-sm-3 col-xs-3" style="text-align:center"><strong>Price</strong></div> 
+
+
+</div><br>
+<br>
+
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-4" ><ol id="code"></ol></div>
+<div class="col-md-2 col-sm-2 col-xs-2"><ul id="qty"></ul></div>
+<div class="col-md-3 col-sm-3 col-xs-3"><ul id="size"></ul></div>
+<div class="col-md-3 col-sm-3 col-xs-3"><ul id="price"></ul></div>
+
+
+</div>
+
+
+</div>
+<div class="modal-footer"><button type="button" class="btn btn-default" onClick="order();"  data-dismiss="modal" >Order</button></div>
+
+</div>
+</div>
+</div>
+
+  <div id="mymodal" class="modal fade" role="dialog"> 
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">LOGIN<button type="button" class="close" data-dismiss="modal">&times;</button> </div>
+<div class="modal-body"><form role="form" id="formlogin" name="f1" >
+<div class="form-group"><label id="label">Username</label>
+<input type="text" name="t1" placeholder="Username" class="form-control" ></div><div class="form-group">
+<label>Password</label><input type="password" name="t2" placeholder="Password" class="form-control"   >
+</div>
+</form> </div>
+<div class="modal-footer"><button type="button" class="btn btn-default" onClick="lgin();"  data-dismiss="modal" >Login</button> </div>
+</div></div></div>
+
+ <a href="about_us.html" style="text-decoration:none;"><h1 class="h1" style="font-size:36px; text-align:center"><span class="spanfnt">Fashion</span> Collection</h1>  </a>
+
+</div>
+</header> 
+
+
+<div class="navbar   navbar-inverse navbar-static-top"  id="nav"  data-spy="affix" data-offset-top="75">
+<div class="container"> 	  <div class="navbar-header">  
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">  
+ 
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+  <!-- InstanceBeginEditable name="EditRegion3" -->
+  <div class="collapse navbar-collapse" style=" text-align:left">
+    <ul class="nav navbar-nav nav-justified" style="color:white;" >
+      <li> </li>
+      <li> </li>
+      <li ><a href="index.html">Home</a></li>
+      <li ><a href="new-collection.html">New Collection</a></li>
+      <li><a href="Pret.html">Pret</a></li>
+      <li ><a href="luxury dress.html">Luxury Dress</a></li>
+      <li ><a href="contact us.html">Contact Us</a></li>
+      <li> </li>
+      <li> </li>
+    </ul>
+  </div>
+  <!-- InstanceEndEditable --></div> 
+   </div>
+
+<div class="container-fluid sidebar"><div class="row"> <div class="col-md-12"> <ul class="nav navbar-nav navbar  navmy"> <li style="background:#42882f;" onClick="game();" class="remove1"></li><li onClick="game1();" style="background:#ee910c;" class="remove2"></li><li style="background:#238cc0;" class="remove3" onClick="game2();"></li><li onClick="game3();" style="background:#c00;" class="remove"></li> </ul> </div> </div> 
+</div> 
+<!-- InstanceBeginEditable name="EditRegion2" -->
+<section >
+   <div class="container-fluid full" style="margin-top:-20px !important;"><div class="row"><div class="col-md-12"><div class="banner"> <h2 class="h2">&nbsp;&nbsp; Traditional &nbsp;&nbsp;</h2><div class="line3"></div></div> <img src="Image/New Collection/formal-banner-listing.jpg" class="img4"> </div> </div> </div>
+</section>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="EditRegion1" -->
+<section style="background:black;"><br><br>
+    <div class="container black" >
+  <div class="row">
+       <div class="col-md-3"><img src="Image/pret Traditional/0000175_platinum-blooms.jpeg" onMouseOver="this,src='Image/pret Traditional/0000176_platinum-blooms.jpeg'" onMouseOut="this.src='Image/pret Traditional/0000175_platinum-blooms.jpeg'" class="img2" name="pic14">
+   <h4>Platinum Blooms</h4><h4>Rs. 25,000.00</h4>    <a href="#" onClick="abc(pic14.name);" data-toggle="modal" data-target="#mymodal1">   <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/pret Traditional/0000177_poison-ivy.jpeg" onMouseOver="this,src='Image/pret Traditional/0000178_poison-ivy.jpeg'" onMouseOut="this.src='Image/pret Traditional/0000177_poison-ivy.jpeg'" class="img2" name="pic13">
+   <h4>Poison Ivy</h4><h4>Rs. 23,000.00</h4>   <a href="#" onClick="abc(pic13.name);" data-toggle="modal" data-target="#mymodal1">   <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/pret Traditional/0000179_pretty-in-pink.jpeg" onMouseOver="this,src='Image/pret Traditional/0000180_pretty-in-pink.jpeg'" onMouseOut="this.src='Image/pret Traditional/0000179_pretty-in-pink.jpeg'" class="img2" name="pic12">
+<h4>Pretty In Pink</h4><h4>Rs. 26,000.00</h4>  <a href="#" onClick="abc(pic12.name);" data-toggle="modal" data-target="#mymodal1">       <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/pret Traditional/0000187_zephyr.jpeg" onMouseOver="this,src='Image/pret Traditional/0000188_zephyr.jpeg'" onMouseOut="this.src='Image/pret Traditional/0000187_zephyr.jpeg'" class="img2" name="pic11">
+  <h4>Zepher</h4><h4>Rs. 24,000.00</h4>  <a href="#" onClick="abc(pic11.name);" data-toggle="modal" data-target="#mymodal1">     <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+     </div> 
+     
+   <div class="row">
+       <div class="col-md-3"><img src="Image/pret Traditional/0000590_silver-brooches.jpeg" onMouseOver="this,src='Image/pret Traditional/0000591_silver-brooches.jpeg'" onMouseOut="this.src='Image/pret Traditional/0000590_silver-brooches.jpeg'" class="img2" name="pic10">
+   <h4>Silver Brooches</h4><h4>Rs. 30,000.00</h4> <a href="#" onClick="abc(pic10.name);" data-toggle="modal" data-target="#mymodal1">     <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/pret Traditional/0000611_tourmaline.jpeg" onMouseOver="this,src='Image/pret Traditional/0000612_tourmaline.jpeg'" onMouseOut="this.src='Image/pret Traditional/0000611_tourmaline.jpeg'" class="img2" name="pic9">
+    <h4>Tourmaline</h4><h4>Rs. 32,000.00</h4> <a href="#" onClick="abc(pic9.name);" data-toggle="modal" data-target="#mymodal1">     <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/pret Traditional/0000614_aurora.jpeg" onMouseOver="this.src='Image/pret Traditional/0000615_aurora.jpeg'" onMouseOut="this.src='Image/pret Traditional/0000614_aurora.jpeg'" class="img2" name="pic8">
+ <h4>Aurora</h4><h4>Rs. 34,000.00</h4> <a href="#" onClick="abc(pic8.name);" data-toggle="modal" data-target="#mymodal1">        <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/pret Traditional/0000623_bosphorus-pearl.jpeg" onMouseOver="this,src='Image/pret Traditional/0000624_bosphorus-pearl.jpeg'" onMouseOut="this.src='Image/pret Traditional/0000623_bosphorus-pearl.jpeg'" class="img2" name="pic7">
+  <h4>Bosphorus</h4><h4>Rs. 38,000.00</h4><a href="#" onClick="abc(pic7.name);" data-toggle="modal" data-target="#mymodal1">       <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+     </div>     
+     
+       <div class="row">
+       <div class="col-md-3"><img src="Image/pret Traditional/0000629_dusty-rose.jpeg" onMouseOver="this,src='Image/pret Traditional/0000630_dusty-rose.jpeg'" onMouseOut="this.src='Image/pret Traditional/0000629_dusty-rose.jpeg'" class="img2" name="pic6">
+    <h4>Dusty Rose</h4><h4>Rs. 34,000.00</h4>  <a href="#" onClick="abc(pic6.name);" data-toggle="modal" data-target="#mymodal1">    <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/pret Traditional/0000748_desert-rose.jpeg" onMouseOver="this.src='Image/pret Traditional/0000767_desert-rose.jpeg'" onMouseOut="this.src='Image/pret Traditional/0000748_desert-rose.jpeg'" class="img2" name="pic5">
+  <h4>Desert Rose</h4><h4>Rs. 32,000.00</h4> <a href="#" onClick="abc(pic5.name);" data-toggle="modal" data-target="#mymodal1">      <div class="btn join2">SHOP NOW </div> </a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/pret Traditional/0000749_sterling-ruby.jpeg" onMouseOver="this,src='Image/pret Traditional/0000765_sterling-ruby.jpeg'" onMouseOut="this.src='Image/pret Traditional/0000749_sterling-ruby.jpeg'" class="img2" name="pic4">
+  <h4>Sterling Ruby</h4><h4>Rs. 39,000.00</h4> <a href="#" onClick="abc(pic4.name);" data-toggle="modal" data-target="#mymodal1">      <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/pret Traditional/0000750_sweet-pea.jpeg" onMouseOver="this,src='Image/pret Traditional/0000764_sweet-pea.jpeg'" onMouseOut="this.src='Image/pret Traditional/0000750_sweet-pea.jpeg'" class="img2" name="pic3">
+      <h4>Sweet Pea</h4><h4>Rs. 34,000.00</h4>  <a href="#" onClick="abc(pic3.name);" data-toggle="modal" data-target="#mymodal1"> <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+     </div>
+  
+         <div class="row">
+       <div class="col-md-3"><img src="Image/pret Traditional/0000751_coral-gota.jpeg" onMouseOver="this,src='Image/pret Traditional/0000761_coral-gota.jpeg'" onMouseOut="this.src='Image/pret Traditional/0000751_coral-gota.jpeg'" class="img2" name="pic2">
+      <h4>Coral Gota</h4><h4>Rs. 33,000.00</h4><a href="#" onClick="abc(pic2.name);" data-toggle="modal" data-target="#mymodal1">     <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+       <div class="col-md-3"><img src="Image/pret Traditional/0000753_red-short-shirt.jpeg" onMouseOver="this,src='Image/pret Traditional/0000757_red-short-shirt.jpeg'" onMouseOut="this.src='image/pret Traditional/0000753_red-short-shirt.jpeg'" class="img2" name="pic1">
+       <h4>Red Short Shirt</h4><h4>Rs. 20,000.00</h4><a href="#" onClick="abc(pic1.name);" data-toggle="modal" data-target="#mymodal1">  <div class="btn join2">SHOP NOW </div></a>
+         <br>
+         <br>
+       </div>
+      
+      
+    <div id="mymodal1" class="modal" role="dialog">
+   <div class="modal-dialog">
+   <div class="modal-content">
+   <div class="modal-header">Product Detail</div>
+   <div class="modal-body mycolor">
+   
+   <div id="mywork" style="display:none;"> <img id="pic1" src="Image/pret Traditional/0000753_red-short-shirt.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Aqua Sea<br>
+ <b>Product Code</b> <span id="code1" >RSS-00231 </span> <br>
+ <b>Rs. <span id="price1">20,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty1"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s1"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Organza kameez with spaghetti strap embellished with beads, crystals and resham. Neckline embellished with Swarovski crystals and resham. Shirt front embellished with floral embroidery of beads, resham, tilla and sequins. Tilla embroidered branches on shirt front. Brocade finishing. Plain back. Fused raw silk culottes with hem embellished with sequins, beads and nakshi lines.</p>
+</div>
+   
+   
+   <div id="mywork1" style="display:none;"> <img  src="Image/pret Traditional/0000751_coral-gota.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Mint Nude Bird<br>
+ <b>Product Code</b><span id="code2" > CRLGA-00981</span>  <br>
+ <b>Rs. <span id="price2">33,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty2"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s2"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Boat neck net shirt with bell sleeves. Gold tilla embroidery on neckline and daaman embellished with sequins, beads, Swarovski crystals and kutdaanas. Embellished trellises on shirt front. Sleeves are also embellished. Plain back. Brocade choli underneath shirt. Screen print culottes. </p>
+</div>
+
+<div id="mywork2" style="display:none;"> <img  src="Image/pret Traditional/0000750_sweet-pea.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Lilac Zigzag<br>
+ <b>Product Code</b><span id="code3" >  STPA-08881</span>  <br>
+ <b>Rs. <span id="price3">34,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty3"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; "id="s3" ><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Lilac net half sleeves jacket embellished all over with sequins and bead zigzag lines. Heavy floral motif on both flaps embellished with dabka, nakshi, sequins, resham, crystals, French knots and beads. Hooks to fasten jacket. Brocade finishing. Jacket back hem embellished with zigzag lines of beads and sequins and a heavy floral motif embellished with dabka-nakshi, sequins, resham, crystals, French knots and beads. Brocade choli with twisted spaghetti straps underneath jacket. Fused raw silk pants hem embroidered with resham zigzag embroidery lines.</p>
+</div> 
+
+<div id="mywork3" style="display:none;"> <img  src="Image/pret Traditional/0000749_sterling-ruby.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Blue Tilla Roses<br>
+ <b>Product Code</b> <span id="code4" >STRL-056681 </span> <br>
+ <b>Rs. <span id="price4">39,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty4"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s4"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Peplum-like style cut of organza paneled shirt with two-tone loop button detailing on the front. Bead lines running from top to bottom of shirt front and back. Gold tilla floral embroidery all around on shirt hem with bead touching. Ball droplet finishing all round hem. Net dupatta with a shoulder motif of floral tilla embroidery and bead touching. Fused organza pants with gold floral tilla embroidery on pant cuff.</p>
+</div>
+
+<div id="mywork4" style="display:none;"> <img  src="Image/pret Traditional/0000748_desert-rose.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Scarlet Jet<br>
+ <b>Product Code</b> <span id="code5" >DRRS-05641 </span> <br>
+ <b>Rs.<span id="price5"> 32,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty5"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s5"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Jacket is made on net with aari resham base and embellished with crystals, beads and cut dana. Shirt also has aari resham base and is embellished with crystals and beads. Pants have an organza applique on hem. They are worked with aari resham embroidery and embellished with crystals and beads.</p>
+</div>
+
+<div id="mywork5" style="display:none;"> <img  src="Image/pret Traditional/0000629_dusty-rose.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Bronze Net<br>
+ <b>Product Code</b> <span id="code6" >DYRSE-578001 </span> <br>
+ <b>Rs. <span id="price6"> 34,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty6"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s6"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Reshaam jaal on the front of the shirt. Reshaam jaal on the back of the shirt. Front jaal heavily embellished with dabka, beads amd sequins. Back jaal embellished with dabka, beads amd sequins. Neckline (front amd back) embellished with dabka, beads, sequins, kamdani amd two semi precious drop stones.</p>
+</div>
+
+<div id="mywork6" style="display:none;"> <img  src="Image/pret Traditional/0000623_bosphorus-pearl.jpeg" width="150" class="modalimg" ><b>Name:-</b> JADE<br>
+ <b>Product Code</b><span id="code7" > BSPR-00414</span> <br>
+ <b>Rs. <span id="price7">38,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty7"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; "  id="s7"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">elvet bodice embellished with crystals, dabka, sequins and nakshi. Screen print border with gota trims and narrow border velvet finishing.</p>
+</div>
+
+<div id="mywork7" style="display:none;"> <img  src="Image/pret Traditional/0000614_aurora.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Mehndi Green Kamdani<br>
+ <b>Product Code</b> <span id="code8" >  ARZA-045709 </span> <br>
+ <b>Rs.<span id="price8"> 34,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty8"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s8"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Center panel with heavy kamdani flowers. Side panels with kamdani chann on plain silk net. Back panel with light kamdani chann. Neckline embellished with heavy dabka, nakshi, sequin and bead work (front and back). Threadwork with beads and sequins under the main neckline (front and back). Threadwork with sequins in beads in multi colors along the daman (front and back). Crystal embellished motif tassels. Double weave jamivar finish.</p>
+</div>
+<div id="mywork8" style="display:none;"> <img  src="Image/pret Traditional/0000611_tourmaline.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Urns Of Hera<br>
+ <b>Product Code</b><span id="code9" > TRME-040701 </span> <br>
+ <b>Rs. <span id="price9">32,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty9"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s9"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Maroon velvet choli's front and back worked with dabka, sequins and french knots. Net lehnga with screen print lining. Floral pots worked with resham embroidery on lehnga hemline.</p>
+</div>
+
+<div id="mywork9" style="display:none;"> <img  src="Image/pret Traditional/0000590_silver-brooches.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Gold Fern<br>
+ <b>Product Code</b><span id="code10" >  SRBRCH-06701  </span><br>
+ <b>Rs. <span id="price10">30,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty10"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s10"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Choli: Front embellished with tilla work.
+Lehnga: Embellished with tilla work trellises.
+Dupatta: Broad tilla border on pallus and smaller tilla border on sides.</p>
+</div>
+  
+<div id="mywork10" style="display:none;"> <img  src="Image/pret Traditional/0000187_zephyr.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Vlush Salmon Sari<br>
+ <b>Product Code</b> <span id="code11" >ZPHR-09211</span>  <br>
+ <b>Rs.<span id="price11"> 24,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty11"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s11"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Sequins scale jaal on net sari with large floral motifs on pallus, finished with brocade.</p>
+</div>
+
+<div id="mywork11" style="display:none;"> <img  src="Image/pret Traditional/0000179_pretty-in-pink.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Odette<br>
+ <b>Product Code</b> <span id="code12" >PTPK-02331</span>  <br>
+ <b>Rs.<span id="price12">26,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty12"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s12"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal"><b>Choli:</b> Armored sequins all over, sequins and French knots jaal on back. Front floral neckline embellished with dabka, nakshi, french knots, crystals.
+<br><b>Lehnga:</b> Net lehnga with big and small bootis embellished with dabka, nakshi, sequins, badla and French knots and crystals. Cutwork tilla border on hem all around. Small bootis on the back. Screen print lining underneath net lehnga.</p>
+</div>
+
+<div id="mywork12" style="display:none;"> <img  src="Image/pret Traditional/0000177_poison-ivy.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Lattice Garden Jacket<br>
+ <b>Product Code</b>  <span id="code13" >PSNVY-02452 </span> <br>
+ <b>Rs. <span id="price13">23,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty13"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; "  id="s13"> <option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Border on hem and center front patti embellished with sequins and tilla. Neckline, sleeves, back motif and back daaman embellished with sequins,dabka, cutwork jaali and resham floral embroidery. Choli worked with dabka, sequins, crystals, beads and resham. Screen print lehnga.</p>
+</div>
+<div id="mywork13" style="display:none;"> <img  src="Image/pret Traditional/0000175_platinum-blooms.jpeg"  width="150" class="modalimg" ><b>Name:-</b> Cappuccino<br>
+ <b>Product Code</b> <span id="code14" >PLBMS-003812 </span> <br>
+ <b>Rs. <span id="price14">25,000.00</span></b><br>
+ 
+<label><b>Qty</b></label> <select class="" style="width:60px !important; " id="qty14"> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+
+</select> <br><label><b>Size</b></label> <select class="" style="width:60px !important; " id="s14"><option>Size</option><option>Small</option><option>Medium</option><option>large</option><option>Extra=Large</option>
+
+</select><br><b>PRODUCT DESCRIPTION</b><br>
+<p class="pmodal">Long embroidered neckline embellished with crystals, sequins, resham and dabka. Kacharesham embroidery with gold pitta touching in cutwork on front daaman.</p>
+</div>
+
+
+   <div class="modal-footer"> <button type="button" data-dismiss="modal" class="btn btn-default cart1"  onClick="cart();">Add to Cart</button>
+   <button type="button"  class="btn btn-default" data-dismiss="modal" onClick="abc1();">Close</button>
+   
+   </div>
+   
+   </div>
+   </div>
+   </div>       
+          
+     </div>
+    
+     </div></div>
+      <script src="javascript/script.js"></script>
+ </section>
+ <!-- InstanceEndEditable -->
+ <footer>
+<div class="navbar-inverse navbar-static-bottom">
+<div class="container-fluid full">
+<div class="line2"></div>
+<div  id="option" class="navbar-text pull-left extra2">&copy; Copyright <b>Fashion Collection</b> All Rights Reserved </div>
+<div class="navbar-text pull-right extra" ><h4 style="float:left;">LIKE & Follow us</h4> &nbsp;&nbsp;&nbsp;&nbsp;<img src="Image/link/facebook-icon.png" width="30"  class="img3" onclick="window.open('https://www.facebook.com')"> &nbsp;&nbsp;&nbsp;&nbsp;
+<img src="Image/link/twitter-icon%20(1).png" width="30"  class="img3" onclick="window.open('https://twitter.com/')">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="Image/link/instagram-icon-circle-vector-logo.png" width="30"  class="img3" onclick="window.open('https://www.instagram.com/?hl=en')">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="Image/link/Pinterest_Favicon.png" width="30" class="img3"  onclick="window.open('https://www.pinterest.com/')">&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+ </div>
+</div>
+</div>
+
+
+
+</footer>
+  </body>
+<!-- InstanceEnd --></html>
